@@ -8,15 +8,17 @@ public class SaleSuccessDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	private String sellerName;
-	private Double sum;
+	private Long visited;
+	private Long deals;
 	
 	public SaleSuccessDTO() {
 		
 	}
 
-	public SaleSuccessDTO(Seller seller, Double sum) {
-		this.sellerName = seller.getName();
-		this.sum = sum;
+	public SaleSuccessDTO(Seller seller, Long visited, Long deals) {
+		sellerName = seller.getName();
+		this.visited = visited;
+		this.deals = deals;
 	}
 
 	public String getSellerName() {
@@ -27,12 +29,20 @@ public class SaleSuccessDTO implements Serializable {
 		this.sellerName = sellerName;
 	}
 
-	public Double getSum() {
-		return sum;
+	public Long getVisited() {
+		return visited;
 	}
 
-	public void setSum(Double sum) {
-		this.sum = sum;
+	public void setVisited(Long visited) {
+		this.visited = visited;
+	}
+
+	public Long getDeals() {
+		return deals;
+	}
+
+	public void setDeals(Long deals) {
+		this.deals = deals;
 	}
 
 }
